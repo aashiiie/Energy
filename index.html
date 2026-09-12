@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convalt Energy — Minimalist 3D Interactive Experience</title>
-    
-    <!-- Custom CSS -->
+
+    <title>Convalt Energy — Next-Generation Clean Energy</title>
+
     <link rel="stylesheet" href="style.css">
-    
-    <!-- External Libraries: Three.js for 3D & GSAP for Ultra-smooth Animations -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
+
 <body>
 
-    <!-- Loading Screen for Professional Polish -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <div class="loader-text">Loading 3D Experience...</div>
-    </div>
+    <!-- Background atmosphere -->
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
 
-    <!-- Top UI Navigation Bar -->
+    <!-- Navigation -->
     <header class="ui-header">
-        <div class="logo">CONVALT<span>.</span></div>
+
+        <a href="#" class="logo">
+            CONVALT<span>.</span>
+        </a>
+
         <nav>
             <ul class="nav-links">
                 <li><a href="#" class="active">Overview</a></li>
@@ -31,35 +33,89 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="header-status">
+            <span></span>
+            ENERGY SYSTEMS / 2026
+        </div>
+
     </header>
 
-    <!-- 3D Canvas Background Container -->
+
+    <!-- 3D Scene -->
     <div id="canvas-container"></div>
 
-    <!-- Dynamic Story Chapter Narrative Overlay -->
+
+    <!-- Main Content -->
     <main class="narrative-container" id="narrative">
-        <div class="chapter-tag" id="chap-tag">Chapter 01 — Solar Manufacturing</div>
-        <h1 class="chapter-title" id="chap-title">Next-Gen Photovoltaic Modules</h1>
+
+        <div class="chapter-tag">
+            <span class="tag-line"></span>
+            <span id="chap-tag">Chapter 01 — Solar Manufacturing</span>
+        </div>
+
+        <h1 class="chapter-title" id="chap-title">
+            Next-Gen<br>
+            <strong>Photovoltaic Modules</strong>
+        </h1>
+
         <p class="chapter-desc" id="chap-desc">
-            Engineered for high yield performance. Our zero-emissions production powers next-generation clean energy technology with silicon precision.
+            Precision-engineered solar silicon cells driving high-density clean energy generation with minimal environmental footprint.
         </p>
+
+        <div class="hero-meta">
+            <div>
+                <span class="meta-label">EFFICIENCY</span>
+                <strong>98.4%</strong>
+            </div>
+
+            <div>
+                <span class="meta-label">SYSTEM</span>
+                <strong>PV / 01</strong>
+            </div>
+        </div>
+
     </main>
 
-    <!-- Bottom Interactive Navigation Controls -->
+
+    <!-- Bottom controls -->
     <div class="controls-container">
-        <div class="step-counter"><span id="curr-step">01</span> / 04</div>
+
+        <div class="step-counter">
+            <span id="curr-step">01</span>
+            <i></i>
+            04
+        </div>
+
         <button class="btn-nav" id="btn-prev" aria-label="Previous chapter">
-            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            <svg viewBox="0 0 24 24">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
         </button>
+
         <button class="btn-nav" id="btn-next" aria-label="Next chapter">
-            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
         </button>
+
     </div>
 
-    <!-- Minimal UI Cue -->
-    <div class="scroll-prompt">Scroll or use arrows to navigate</div>
 
-    <!-- Custom JavaScript -->
+    <!-- Bottom branding -->
+    <div class="bottom-left">
+        <span>CONVALT ENERGY</span>
+        <small>POWERING THE NEXT GENERATION</small>
+    </div>
+
+
+    <div class="coordinates">
+        <span>40.7128° N</span>
+        <span>74.0060° W</span>
+    </div>
+
+
     <script src="script.js"></script>
+
 </body>
 </html>
